@@ -1,0 +1,24 @@
+[package]
+name = "myspoti-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+myspoti-core = { path = "../myspoti-core" }
+myspoti-spotify = { path = "../myspoti-spotify" }
+myspoti-audio = { path = "../myspoti-audio" }
+tokio = { workspace = true }
+axum = { workspace = true }
+tower-http = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+uuid = { workspace = true }
+thiserror = { workspace = true }
+futures-util = { workspace = true }
+bytes = { workspace = true }
+urlencoding = { workspace = true }

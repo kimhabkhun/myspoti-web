@@ -1,0 +1,23 @@
+services:
+  myspoti-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myspoti-web
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - RUST_LOG=info
+      - PORT=8080
+      - SP_DC=${SP_DC:-}
+    volumes:
+      - ./web:/app/web:ro
+      - ./config:/app/config
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 128M
+        reservations:
+          memory: 32M

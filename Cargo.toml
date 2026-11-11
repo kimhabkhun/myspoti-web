@@ -1,0 +1,32 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/myspoti-core",
+    "crates/myspoti-spotify",
+    "crates/myspoti-audio",
+    "crates/myspoti-server",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Myspoti Rust Contributors"]
+license = "GPL-3.0-only"
+
+[workspace.dependencies]
+tokio = { version = "1.38", features = ["full"] }
+axum = { version = "0.7", features = ["ws", "macros"] }
+tower-http = { version = "0.5", features = ["cors", "compression-full", "trace", "fs"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "brotli", "gzip", "cookies"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1.8", features = ["v4"] }
+thiserror = "1.0"
+async-trait = "0.1"
+futures-util = "0.3"
+bytes = "1.6"
+sha2 = "0.10"
+hex = "0.4"
+urlencoding = "2.1"

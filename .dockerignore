@@ -1,0 +1,6 @@
+target/
+target_test/
+frontend/node_modules/
+frontend/dist/
+.git/
+*.log
