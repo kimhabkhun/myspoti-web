@@ -1,6 +1,6 @@
 # Myspoti Web (Rust Rewrite)
 
-> High-performance, low-latency rewrite of [Myspoti](https://github.com/myspoti) from Android Kotlin into a modern, multi-viewport responsive web application powered by **Rust** (Axum, Tokio), WebAssembly Audio DSP, and Docker.
+> High-performance, low-latency web rewrite of [kota-zo/myspoti](https://github.com/kota-zo/myspoti) (native Android client) into a modern, multi-viewport responsive web application powered by **Rust** (Axum, Tokio), React 18, WebAssembly Audio DSP, and Docker.
 
 ---
 
@@ -169,6 +169,21 @@ myspoti-rust-rewrite/
 | **Music Video Sync** | In-app YouTube player | Theater mode synchronized iframe player | ✅ **100% Parity** |
 | **Responsive Viewports** | Mobile phone only | Mobile (XS), Tablet (MD), Desktop (LG), Smart TV (10-foot) | 🚀 **Universal** |
 | **UX & Loading States** | Basic spinners | Wave skeleton shimmer loaders for cards & shelves | ✅ **100% Parity** |
+
+---
+
+## 🙏 Credits & Acknowledgments
+
+This project is an independent web & Rust rewrite inspired by and built upon the upstream research and reverse-engineering of **[kota-zo/myspoti](https://github.com/kota-zo/myspoti)**:
+
+- **Original Creator & Project**:
+  - **Author**: [@kota-zo](https://github.com/kota-zo)
+  - **Original Repository**: [kota-zo/myspoti](https://github.com/kota-zo/myspoti) — Native Android client for Spotify, built with Jetpack Compose & Kotlin.
+  - **Protocols & Schemas**: Sincere thanks to [kota-zo](https://github.com/kota-zo) for reverse-engineering the Spotify Pathfinder GraphQL schema (`gql-ops`), the TOTP challenge authentication flow, and ColorLyrics v2 protocol integration.
+- **Upstream UI & Inspiration**:
+  - Credit to **[kushagrasinghx](https://github.com/kushagrasinghx)** ([BitChord](https://github.com/kushagrasinghx/BitChord)) for the original mobile design and UI concepts that inspired the upstream Android client.
+- **Rewrite Scope**:
+  - This repository ([kimhabkhun/myspoti-web](https://github.com/kimhabkhun/myspoti-web)) completely rebuilds the backend from JVM/Android Kotlin into high-performance **Rust** (Axum, Tokio, Reqwest) for 14x lower memory footprint (~25 MB native RAM), replaces the mobile UI with a responsive **React 18** web client (Desktop, Tablet, Mobile, Smart TV), and packages the entire stack into a lightweight Alpine Docker container.
 
 ---
 
